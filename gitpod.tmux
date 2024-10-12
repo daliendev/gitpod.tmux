@@ -335,11 +335,11 @@ CMD
                     { 
                         if first_window="$(tmux list-windows -F '#{window_id}' | head -n1)"; then
                             { 
-                                tmux rename-window -t :${first_window} "${window_name}"\; send-keys -t :${first_window} "${editor}" Enter
+                                tmux rename-window -t :${first_window} "${window_name}"\; send-keys -t :${first_window} "${editor} ." Enter
                             };
                         else
                             { 
-                                tmux new-window -t "${window_name}" -- bash -c "trap 'exec bash -li' EXIT ERR; '${editor}'"
+                                tmux new-window -t "${window_name}" -- bash -c "trap 'exec bash -li' EXIT ERR; '${editor} .'"
                             };
                         fi
                     };
