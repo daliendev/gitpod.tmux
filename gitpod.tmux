@@ -180,6 +180,8 @@ main@bashbox%gitpod.tmux ()
   # message style
   set-option -g message-style "bg=${LIGHT_GRAY},fg=${WHITE}"
 
+  # escape time compatibility with nvim
+  set-option -sg escape-time 10
   
 CMD
 
