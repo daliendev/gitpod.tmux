@@ -182,6 +182,9 @@ main@bashbox%gitpod.tmux ()
 
   # escape time compatibility with nvim
   set-option -sg escape-time 10
+
+  # Use vim keybindings in copy mode
+  setw -g mode-keys vi
   
 CMD
 
